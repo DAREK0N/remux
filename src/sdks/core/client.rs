@@ -173,7 +173,20 @@ impl RestClient {
         let mut url = self.baseurl.clone();
 
         if let Some(path) = path {
-            url = url.join(&path)?;
+            // normalize path: collapse consecutive slashes to a single slash
+            // (e.g. "//assets//img.png" -> "/assets/img.png")
+            let normalized_path = {
+                // collapse any '//' sequences into a single '/'
+                // path here is not a full URL, so this is safe.
+                let mut s = path.clone();
+                while s.contains("//") {
+                    s = s.replace("//", "/");
+                }
+                s
+            };
+
+            url = url.join(&normalized_path)?;
+            debug!("Path replaced");
         }
 
         // we already encode in another layer as we want finer control over the query params
