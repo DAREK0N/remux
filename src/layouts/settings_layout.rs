@@ -1,9 +1,13 @@
 use dioxus::prelude::*;
-use crate::Route;
+use crate::{components::SettingsSidebar, Route};
 
 #[component]
 pub fn SettingsLayout() -> Element {
     rsx! {
-        div { Outlet::<Route> {} }
+        div {
+            class: "flex flex-row",
+            SettingsSidebar {}
+            div { Outlet::<Route> {} }
+        }
     }
 }

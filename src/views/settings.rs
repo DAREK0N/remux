@@ -26,14 +26,15 @@ pub fn Settings() -> Element {
 
     rsx! {
         div {
-            h1 { "Settings" }
+            /*h1 { "Settings" }
             SettingsCategory{
                 title: "User",
                 SettingsItem{
                     title: "Profile",
                     to: Route::SettingsCatalogView {},
                 },
-            }
+            }*/
+
             /*ul {
                 //   title: "Content",
                 li {

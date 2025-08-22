@@ -73,3 +73,6 @@ pub use settings_item::SettingsItem;
 
 pub mod dev_nav;
 pub use dev_nav::DevNav;
+
+pub mod settings_sidebar;
+pub use settings_sidebar::SettingsSidebar;

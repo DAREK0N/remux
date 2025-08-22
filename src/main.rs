@@ -42,6 +42,7 @@ pub enum Route {
             Settings {},
             #[route("/settings/catalog")]
             SettingsCatalogView {},
+        
         #[layout(MainLayout)]
             #[route("/")]
             Home {},

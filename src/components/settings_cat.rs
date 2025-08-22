@@ -15,7 +15,7 @@ pub fn SettingsCategory(props: SettCatProps) -> Element {
             class: "select-none h-fit w-full flex flex-col gap-1",
             // Make colapseble?
             h1{
-                class: "text-xl",
+                class: "text-xl text-white/80",
                 {props.title}
             }
             div{

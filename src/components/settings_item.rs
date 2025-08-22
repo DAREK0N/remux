@@ -12,7 +12,7 @@ pub struct SettItemProps {
 pub fn SettingsItem(props: SettItemProps) -> Element {
     let content = rsx! {
         div { 
-            class: "group/{props.title} w-full flex items-center justify-between px-4 py-3 bg-zinc-900 rounded-lg hover:bg-zinc-800 transition",
+            class: "group/{props.title} w-full flex items-center justify-between px-3 py-2 bg-zinc-900/0 rounded-lg hover:bg-zinc-800 transition",
             div{
                 class: "flex items-center space-x-3",
                 /*span {
@@ -20,7 +20,7 @@ pub fn SettingsItem(props: SettItemProps) -> Element {
                     {props.icon},
                 }*/
                 span {
-                    class: "group/{props.title} text-white/80 font-medium hover:text-white",
+                    class: "group/{props.title} text-white",
                     {props.title}
                 }
             }
