@@ -70,3 +70,6 @@ pub use settings_cat::SettingsCategory;
 
 pub mod settings_item;
 pub use settings_item::SettingsItem;
+
+pub mod dev_nav;
+pub use dev_nav::DevNav;

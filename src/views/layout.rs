@@ -1,4 +1,5 @@
 use crate::components;
+use crate::components::DevNav;
 use crate::hooks;
 use crate::media;
 use crate::Route;
@@ -25,6 +26,9 @@ fn LoadingProvider(children: Element) -> Element {
 #[component]
 pub fn AuthenticatedLayout() -> Element {
     rsx! {
+        // Remove Before Shipping!!!!! \/
+        DevNav {  }
+        // Remove Before Shipping!!!!! /\
         ServerProvider { Outlet::<Route> {} }
     }
 }

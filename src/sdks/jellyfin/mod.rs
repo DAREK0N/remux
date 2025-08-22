@@ -418,8 +418,8 @@ pub struct UserDto {
 }
 
 #[skip_serializing_none]
-#[serde(rename_all = "PascalCase")]
 #[derive(Default, Deserialize, PartialEq, Serialize, Clone, Debug)]
+#[serde(rename_all = "PascalCase")]
 pub struct MediaStream {
     pub aspect_ratio: Option<String>,
     //  pub audio_spatial_format: AudioSpatialFormat,

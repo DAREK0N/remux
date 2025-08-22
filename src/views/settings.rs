@@ -34,7 +34,7 @@ pub fn Settings() -> Element {
                     to: Route::SettingsCatalogView {},
                 },
             }
-            ul {
+            /*ul {
                 //   title: "Content",
                 li {
                     SettingRow {
@@ -68,7 +68,7 @@ pub fn Settings() -> Element {
                         "Logout"
                     }
                 }
-            }
+            }*/
         }
     }
 }

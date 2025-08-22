@@ -13,6 +13,7 @@ use views::{
     settings::SettingsCatalogView, AuthenticatedLayout, HomeTransitionView as Home, LoginView,
     MainLayout, SafeSpaceLayout, SearchView, UnauthenticatedLayout,
 };
+use layouts::SettingsLayout;
 
 mod addons;
 mod capabilities;
@@ -26,6 +27,7 @@ mod server;
 mod settings;
 mod utils;
 mod views;
+mod layouts;
 
 #[derive(Debug, Clone, Routable, PartialEq)]
 #[rustfmt::skip]
@@ -35,6 +37,11 @@ pub enum Route {
       LoginView {},
 
     #[layout(AuthenticatedLayout)]
+        #[layout(SettingsLayout)]
+            #[route("/settings")]
+            Settings {},
+            #[route("/settings/catalog")]
+            SettingsCatalogView {},
         #[layout(MainLayout)]
             #[route("/")]
             Home {},
@@ -44,10 +51,6 @@ pub enum Route {
             #[layout(SafeSpaceLayout)]
                 #[route("/search/:query")]
                 SearchView { query: String },
-                #[route("/settings")]
-                Settings {},
-                #[route("/settings/catalog")]
-                SettingsCatalogView {}
 }
 
 fn main() {
