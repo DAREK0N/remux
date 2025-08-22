@@ -1,4 +1,6 @@
 use crate::components;
+use crate::components::settings_cat::SettingsCategory;
+use crate::components::SettingsItem;
 use crate::hooks;
 use crate::server;
 use crate::settings::{use_settings, Addon};
@@ -25,6 +27,13 @@ pub fn Settings() -> Element {
     rsx! {
         div {
             h1 { "Settings" }
+            SettingsCategory{
+                title: "User",
+                SettingsItem{
+                    title: "Profile",
+                    to: Route::SettingsCatalogView {},
+                },
+            }
             ul {
                 //   title: "Content",
                 li {
@@ -54,6 +63,8 @@ pub fn Settings() -> Element {
                                 server.set(None);
                             }
                         },
+                        class: "cursor-pointer select-none",
+                        href: "/login",
                         "Logout"
                     }
                 }

@@ -34,7 +34,7 @@ pub fn LoginView() -> Element {
         let password = password();
 
         // Trims the last "/" from the base URL to avoid wrong paths.
-        // URI builder adds a "/" the the beginning of the asset path.
+        // URI builder adds a "/" to the beginning of the asset path.
         let mut host = host.trim().to_string();
         if host.ends_with('/') && host.len() > "http://".len() + 1 {
         host = host.trim_end_matches('/').to_string();

@@ -64,3 +64,9 @@ pub mod paginated_list_eval;
 pub use paginated_list_eval::*;
 //#[cfg(not(target_arch = "wasm32"))]
 pub use paginated_list_eval::PaginatedList as CarouselList;
+
+pub mod settings_cat;
+pub use settings_cat::SettingsCategory;
+
+pub mod settings_item;
+pub use settings_item::SettingsItem;

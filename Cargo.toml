@@ -8,7 +8,7 @@ edition = "2021"
 
 [dependencies]
 #remux-macros = { path = "./remux-macros" }
-dioxus = { version = "0.7.0-alpha.3", default-features = false, features = ["router"] }
+dioxus = { version = "=0.7.0-alpha.3", default-features = false, features = ["router"] }
 dioxus-logger = "0.7.0-alpha.3"
 #eyre = "0.6"
 reqwest = { version = "0.12", default-features = false, features = ["json","rustls-tls"] }
